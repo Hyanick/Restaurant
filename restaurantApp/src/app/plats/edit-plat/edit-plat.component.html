@@ -1,0 +1,56 @@
+
+<form #form = "ngForm" >
+    <div>
+        <span class="titreAddUpd">Modifier un Plat existant</span>
+        <button mat-raised-button type="button" (click)="close()"> <mat-icon>close</mat-icon> </button>
+      </div>
+  <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile>
+        <div class="controles-container">
+
+            <mat-form-field>
+                <input matInput [(ngModel)] ="data.id" name="id" placeholder="id"  readonly>
+              </mat-form-field>
+          <mat-form-field>
+              <input matInput [(ngModel)] = "data.nom" name="nom" placeholder="Nom" #nom="ngModel"  >
+              <div *ngIf="nom.invalid && (nom.dirty || nom.touched)"class="alert alert-danger">
+                  <div *ngIf="nom.errors.required"> Nom obligatoire. </div>
+              </div>
+          </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)] = "data.prix" name="prix" placeholder="prix" >
+              <span matSuffix>Fcfa</span>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)] ="data.poids" name="poids" placeholder="poids" >
+              <span matSuffix>g</span>
+            </mat-form-field>
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <div class="controles-container">
+            <mat-form-field>
+                  <textarea matInput [(ngModel)] = "data.descriptionPlat" name="descriptionPlat" placeholder="Description Plat"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput [(ngModel)] = "data.descriptionChef" name="descriptionChef" placeholder="Description du Chef"></textarea>
+            </mat-form-field>
+            <div class="buttons">
+                <button mat-raised-button color="primary" type="button" matTooltip="Ajouter un nouveau plat "[disabled] ="!form.valid"
+                *ngIf="data.id == null"
+                (click) = "savedata()">
+                  <mat-icon>add</mat-icon> Ajouter
+                </button>
+                <button mat-raised-button color="primary" type="button" matTooltip="Mettre à jour le plat"[disabled] ="!form.valid"
+                *ngIf="data.id != null"
+                (click) = "update()">
+                    <mat-icon>add</mat-icon> Mettre à jour
+                  </button>
+                <button type="button" mat-raised-button color="warn" (click)="resetForm(form)">Clear</button>
+
+              </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+</form>

@@ -1,0 +1,24 @@
+
+  <br>
+<div class="container">
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%">
+    <mat-card class="card-picture11" *ngFor="let listPlat of listPlats; let i=index;">
+        <mat-card-header>
+            <mat-card-title>{{listPlat.nom}}</mat-card-title>
+            <mat-card-subtitle> .</mat-card-subtitle>
+          </mat-card-header>
+      <div class="zoom">
+          <div>
+          <div><img draggable="false" class="img1" mat-card-image [src]="listPlat.photo"  alt="Photo of a Shiba Inu"
+            (click) ="onOpen(i, listPlat.id, listPlat.nom, listPlat.prix, listPlat.poids,listPlat.descriptionPlat,listPlat.descriptionChef, listPlat.photo)"></div>
+          </div>
+      </div>
+
+      <mat-card-content>
+        <span fxFlex="80%">{{listPlat.nom}}</span>
+        <span fxFlex="80%">{{listPlat.prix}} <span matSuffix> Fcfa</span></span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

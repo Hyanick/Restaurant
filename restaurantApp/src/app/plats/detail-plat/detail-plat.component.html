@@ -1,0 +1,188 @@
+<mat-card class="image-card">
+    <img mat-card-image [src]="data.photo" alt="Photo of a Shiba Inu">
+</mat-card>
+
+<div class="nomPrix-card">
+    <mat-card >
+        Nom: {{data.nom}}
+        <p></p>
+        Prix: {{data.prix}} <span matSuffix> Fcfa</span>
+        <p></p>
+        Poids: {{data.poids}} <span matSuffix> g</span>
+    </mat-card>
+</div>
+
+
+<mat-card class="descPlat-card">
+    <mat-tab-group [selectedIndex]="0">
+        <mat-tab label="Description">
+          <h3>Descrition Plat</h3>
+          <p>{{data.descriptionPlat}}</p>
+          <h3>Poids</h3>
+          <p>{{data.poids}} <span matSuffix> g</span></p>
+        </mat-tab>
+        <mat-tab label="Lunch">
+          <h3>Lunch option</h3>
+          <p>Club sandwich</p>
+        </mat-tab>
+        <mat-tab label="Dinner">
+          <h3>Dinner option</h3>
+          <p>Lasagna</p>
+        </mat-tab>
+      </mat-tab-group>
+</mat-card>
+
+<!-- <mat-card class="descChef-card">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+</mat-card> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="product-sheet">
+    <div class="product-sheet_header">
+       <div class="product-sheet_header_cover"><img draggable="false" class="carousel-wrapper" src="https://res.cloudinary.com/eatzy/image/upload/c_fill,h_387,w_580/v1542634538/foodcheri/prod/product/5006.jpg"><span class="product-sheet_header_ribbon ribbon" style="background-color: rgb(248, 191, 75);"><img class="product-sheet_header_ribbon_icon ribbon_icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTUgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT50YWctcHJvZHVjdGV1cmNoZXJpPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZD0iTTcuMDMzNTUzMTUsMy43ODE5MDU5MSBDNi43NjgwNzk1NywzLjgwMjQ3NDg0IDYuNTA0OTAwNTIsMy42NjE3NDQ4OCA2LjM4MTg0MzQxLDMuNDA3NjExOTEgQzUuODgwNDEwMDQsMi4zNzIwNzAzIDQuNTg1NzQ3MTUsMS44MDgwNDc4NSAzLjM2NzQ5MDUsMi4wNTcyODc5IEMyLjA1OTA0ODQyLDIuMzI0OTc4NzYgMS4yNDIyNTE3MiwzLjQxODU3MDQzIDEuMzQxNTQ1MjgsNS4yMzM0NTA3IEMxLjQwNTc5MTQxLDYuNDEyMTc2NTEgMi41MjUzNTI0LDcuNzg5MzM1NTQgNC41MjY1MjI1MSw5LjM4MzI4ODA0IEM1LjAxNDg5NzM4LDkuNzcyMjgzNjMgNi4yMjQ4MTAwMSwxMC42NjE1NTI4IDYuODU1NTI5NywxMS4xMjQ2MTEzIEM3LjUxNzE1NTg0LDEwLjY4NzA1NDYgOC43OTg2MTgyNSw5LjgzNzc4NDI3IDkuMzE2MzgxOSw5LjQ2MzYwMDkzIEMxMS4zNjIxNzczLDcuOTg1MTIyMTUgMTIuNTMwNDk1NCw2LjY3NTIyMDA2IDEyLjY1MTQ1MjQsNS41MTE4ODIxMSBDMTIuODM5NzE1OSwzLjcwNDAzNjM4IDEyLjA3NzU2MDcsMi41NzE0Mjk2IDEwLjc4Mzg2NDYsMi4yMzk3MDg3OCBDOS41NzkzNDIwNSwxLjkzMDg1MzIzIDguMjU4NjI4NTEsMi40MzA2Mzc4NyA3LjcwNjkyNDM3LDMuNDQwNTQ1NDkgQzcuNTcwODU2NjQsMy42ODk2MjA3MSA3LjI5OTAwMjI1LDMuODE3MzE0NyA3LjAzMzU1MzE1LDMuNzgxOTA1OTEgWiBNNy4yODY4OTc0MiwxMi40Mzc2NzA0IEM3LjE1OTAzMTQsMTIuNTUyODQ4OCA2Ljk5NDE2ODc0LDEyLjYxMTI5ODUgNi44Mjg2OTYwMiwxMi42MDgzMjQ1IEM2LjY1NTY0MzMsMTIuNjA4MDQyMyA2LjQ4NDk3NjI5LDEyLjU0MDU1NzUgNi4zNTc4NzE2NiwxMi40MTMyNDA5IEM1Ljk3NzA2MDQxLDEyLjEzMzIzNDQgNC4zMTMwMTk1NCwxMC45MTc4Mjc3IDMuNjk1ODE2OTIsMTAuNDI2MjE5NSBDMS40MDc4ODI3NCw4LjYwMzg1NjQ3IDAuMTAyNDA5Njg0LDYuOTk4MDA5MTYgMC4wMTAxOTU1MjM0LDUuMzA2MTUyNzQgQy0wLjEyNDcxNzk5NSwyLjg0MDIxMzk2IDEuMTM1NDY1NzEsMS4xNTI5ODA4OSAzLjEwMDI0MjgzLDAuNzUxMDEyMTAxIEM0LjU3OTYwNjc5LDAuNDQ4MzUyNzY2IDYuMTQwMjYxODIsMC45NjMyMjg0NTcgNy4wNzgwNjU5NiwyLjA1ODE3NjggQzguMDY4NTM0NjcsMS4wMTA2NDI3MyA5LjY1MjQyNTk2LDAuNTczMTI1NDQ5IDExLjExNTAzNTQsMC45NDgxNTc4ODggQzEzLjA1NzY0MDYsMS40NDYyNjc2MiAxNC4yMzM0MjA1LDMuMTkzNTQ0NTUgMTMuOTc3NjI1NCw1LjY0OTg3NzY3IEMxMy44MDM4MTAyLDcuMzIxNTk1ODUgMTIuNDM4NTMwMSw4Ljg1MjMyODkzIDEwLjA5NzM2OTIsMTAuNTQ0MjY1OCBDOS40NDI2MDMwNCwxMS4wMTc0NTk3IDcuNjc5MDk1NDksMTIuMTc4Mjk5NyA3LjI4Njg5NzQyLDEyLjQzNzY3MDQgWiIgaWQ9InBhdGgtMSI+PC9wYXRoPgogICAgPC9kZWZzPgogICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJ0YWcvc21hbGwvY2jDqXJpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOC4wMDAwMDAsIC05LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0ibm91dmVhdXTDqSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAiPgogICAgICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuMDAwMDAwLCA1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iaWNvbi9vZmZyZS1jb21tZXJjaWFsZV8yIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJQYWdlLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuNjY2NjY3LCAzLjMzMzMzMykiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJjb2xvciI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHVzZSBpZD0iTWFzayIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiB4bGluazpocmVmPSIjcGF0aC0xIj48L3VzZT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImNvbG9yL2JvZHkiIG1hc2s9InVybCgjbWFzay0yKSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMi42NjY2NjcsIC0zLjMzMzMzMykiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtMiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJldmVub2RkIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSIzIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImNvbG9yL3JvdW5kL2JsYW5rIiBmaWxsPSJub25lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgMTguODAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtOCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iY29sb3Ivcm91bmQvYmxhbmsiIGZpbGw9Im5vbmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4LjgwMDAwMCwgMTguODAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtOCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iY29sb3Ivcm91bmQvYmxhbmsiIGZpbGw9Im5vbmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4LjgwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZS04IiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJjb2xvci9yb3VuZC9ibGFuayIgZmlsbD0ibm9uZSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtOCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="Vos coups de coeur">Vos coups de coeur</span></div>
+       <div class="product-sheet_header_text-content">
+          <h3 class="product-sheet_header_text-content_title">Penne au pesto &amp; aux légumes</h3>
+          <div class="product-sheet_header_text-content_tags">
+             <div class="product-sheet_header_text-content_tags_lead">
+                <div class="product-sheet_header_text-content_tags_lead_item product-sheet_header_text-content_tags_lead_item--tag">à réchauffer</div>
+                <div class="product-sheet_header_text-content_tags_lead_item product-sheet_header_text-content_tags_lead_item--weight">POIDS NET : 412 g</div>
+             </div>
+             <div class="product-sheet_header_text-content_tags_tags-row tags-row">
+                <div class="product-sheet_header_text-content_tags_tags-row_lead tags-row_lead"></div>
+                <div class="product-sheet_header_text-content_tags_tags-row_tag-wrapper tags-row_tag-wrapper">
+                   <div class="product-sheet_header_text-content_tags_tags-row_tag-wrapper_tooltip tags-row_tag-wrapper_tooltip"><span>végétarien</span></div>
+                   <div class="product-sheet_header_text-content_tags_tags-row_tag-wrapper_tag tags-row_tag-wrapper_tag tags-row_tag-wrapper_tag tags-row_tag-wrapper_tag--icon tags-row_tag-wrapper_tag--icon-veggie">&nbsp;</div>
+                </div>
+             </div>
+          </div>
+          <div class="product-sheet_header_text-content_cart">
+             <div class="product-sheet_header_text-content_cart_price"><span class="product-sheet_header_text-content_cart_price_units">6,</span><span class="product-sheet_header_text-content_cart_price_cents">90€</span><br></div>
+             <div class="product_cta">
+                <div class="add-to-cart-widget">
+                   <div title="Ajouter au panier" class="add-to-cart-widget_btn add-to-cart-widget_btn--more"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <div class="clear"></div>
+ </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="product-sheet">
+  <div class="product-sheet_header">
+    <div class="product-sheet_header_cover">
+        <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          </mat-card>
+    </div>
+
+
+</div> -->
+
+
+<!-- <div style="align-content: center">
+    <mat-card class="example-card1">
+      <mat-tab-group [selectedIndex]="2">
+        <mat-tab label="Breakfast">
+          <h3>Breakfast option</h3>
+          <p>Toast /w peanut butter</p>
+        </mat-tab>
+        <mat-tab label="Lunch">
+          <h3>Lunch option</h3>
+          <p>Club sandwich</p>
+        </mat-tab>
+        <mat-tab label="Dinner">
+          <h3>Dinner option</h3>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+
+    </div> -->

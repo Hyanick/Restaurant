@@ -1,0 +1,67 @@
+.example-card {
+  max-width: 20%;
+  margin: 10px;
+  bottom: 100px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 100%;
+  cursor: pointer;
+
+
+}
+
+.zoom2 div  img {
+	-webkit-transform: scale(1);
+	transform: scale(1.25);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.zoom2 div :hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.zoom div img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	transition: .3s ease-in-out;
+}
+.zoom div:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1.05);
+}
+
+
+
+.container1 {
+  min-height: 100%;
+  width: 100%;
+}
+.card-picture11 {
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+.search-form {
+  width: 90%;
+}
+
+mat-card {
+  width: calc(100% - 70px);
+  height: calc(100% - 70px);
+}
+
+
+

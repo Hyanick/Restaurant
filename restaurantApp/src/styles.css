@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.spacer{
+  margin-top: 10px;
+}
+.spaceButton{
+  margin-left: 5px;
+}
+
+table {
+  width: 90%;
+}
+.hide{
+  display: none;
+
+}
+
+
+mat-footer-row mat-footer-cell{
+  justify-content: center;
+  font-style: italic;
+}
+
+mat-spinner{
+  height: 2px;
+}
+
+.search-div{
+  margin: 10px;
+  }
+  .search-form-field{
+    width: 85%;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    }
+    .search-form-field div.mat-form-field-underline{
+      display: none;
+    }
+    .search-form-field div.mat-form-field-infix{
+      border-top: 0px;
+    }
+    .search-form-field div.mat-form-field-wrapper{
+      padding-bottom: 0px;
+    }
+    .search-form-field div.mat-form-field-suffix button{
+      height: 32px;
+      width: 32px;
+    }
+    .example-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .example-container > * {
+      width: 100%;
+    }
+
+.example-button-row button,
+.example-button-row a {
+  margin-left: 80%;
+}
+
+.controles-container{
+
+  padding: 5%;
+}
+
+.controles-container > * {
+  width: 100%
+}
+.buttons button {
+  margin-right: 5px;
+}
+
+.titreAddUpd{
+  margin-right: 30%; margin-left: 30% ;font-weight: bold;
+}
+
+#toast-container > div {
+  opacity: 1;
+}
+
+

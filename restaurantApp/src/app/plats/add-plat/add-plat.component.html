@@ -1,0 +1,84 @@
+<!-- <div class="example-container">
+  <div class="row">
+    <div class="col-md-6">
+      <mat-form-field>
+        <input matInput placeholder="Nom">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Prix">
+          <span matSuffix>Fcfa</span>
+        </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Description Plat"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6">
+        <mat-form-field>
+          <input matInput placeholder="Poids">
+          <span matSuffix>g</span>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Description du Chef"></textarea>
+        </mat-form-field>
+      </div>
+  </div>
+  <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="AddPlat()"> <mat-icon>add</mat-icon> Ajouter</button>
+  </div>
+
+</div> -->
+
+<form #form = "ngForm" (submit) = "savePlat(form)">
+  <div>
+    <span class="titreAddUpd">Ajouter un nouveau Plat</span>
+    <button mat-raised-button type="button" (click)="close()"> <mat-icon>close</mat-icon> </button>
+  </div>
+  <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile>
+        <div class="controles-container">
+          <mat-form-field>
+              <input matInput [(ngModel)] = "plat.nom" name="nom" placeholder="Nom" #nom="ngModel"  >
+              <div *ngIf="nom.invalid && (nom.dirty || nom.touched)"class="alert alert-danger">
+                  <div *ngIf="nom.errors.required"> Name is required. </div>
+              </div>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)] ="plat.prix" name="prix" placeholder="Prix" >
+                <span matSuffix>Fcfa</span>
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput [(ngModel)] = "plat.poids" name="poids" placeholder="Poids" >
+                  <span matSuffix>g</span>
+              </mat-form-field>
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <div class="controles-container">
+            <mat-form-field>
+              <textarea matInput [(ngModel)] = "plat.descriptionPlat" name="descriptionPlat" placeholder="Description Plat"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput [(ngModel)] = "plat.descriptionChef" name="descriptionChef" placeholder="Description du Chef"></textarea>
+            </mat-form-field>
+            <div class="buttons">
+                <button mat-raised-button color="primary" type="submit" matTooltip="Ajouter un nouveau plat"[disabled] ="!form.valid">
+                  <mat-icon>add</mat-icon> Ajouter
+                </button>
+                <!-- <button mat-raised-button color="primary" type="button" matTooltip="Ajouter un nouveau plat"[disabled] ="!form.valid"
+                *ngIf="plat.id != null"
+                (click) = "update()">
+                    <mat-icon>add</mat-icon> Mettre à jour
+                  </button> -->
+                <button type="button" class="" mat-raised-button color="warn" (click)="resetForm(form)">Clear</button>
+
+              </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="row">
+      </div>
+       <img *ngIf="imageUrl" [src]="imageUrl"  style="width:250px;height:200px">
+      <input type="file" #Image accept="image/x-png;base64,image/gif;base64,image/jpeg;base64"  (change)="onFileSelected($event)" >
+
+</form>

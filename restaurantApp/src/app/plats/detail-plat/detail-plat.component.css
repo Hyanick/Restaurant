@@ -1,0 +1,36 @@
+.image-card {
+  width: 47%;
+  float: left;
+  position: relative;
+  -webkit-animation: fadeIn .5s ease-out;
+   animation: fadeIn .5s ease-out;
+   bottom: 10%;
+}
+
+.nomPrix-card {
+  width: 47%;
+  float: right;
+  position: relative;
+  margin-bottom: 25px;
+  -webkit-animation: fadeIn .5s ease-out;
+   animation: fadeIn .5s ease-out;
+}
+
+.descPlat-card {
+  padding: 35px;
+  width: 47%;
+  float: right;
+  position: relative;
+  -webkit-animation: fadeIn .5s ease-out;
+   animation: fadeIn .5s ease-out;
+}
+
+.descChef-card {
+  width: 30%;
+
+  float: left;
+  position: relative;
+  -webkit-animation: fadeIn .5s ease-out;
+   animation: fadeIn .5s ease-out;
+}
+
